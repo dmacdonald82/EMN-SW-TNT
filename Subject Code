@@ -1,0 +1,1 @@
+{%if recipient.is_admin%}{%if event == 'ticket-opened'%}NEW TICKET!  --  {%endif%} {%endif%}{{ticket.ref}} {{ticket.summary}}
