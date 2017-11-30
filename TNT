@@ -16,8 +16,8 @@
     <tbody>
     <tr>
       <td style="padding:6px 10px 6px;font-family:Trebuchet MS,Arial,Verdana,sans-serif;font-size:75%;">
-        <div style="padding:8px;width:100%"><p>Your ticket has been closed.  If you want to express your thanks to your technician, simply email {% if ticket.assignee.email == null %}the <a style="text-underline:none" href="mailto:YOU@YOURDOMAIN.com?subject=Ticket {{ticket.id}} - Thanks!"> IT department {% else %} <a style="text-underline:none" href="mailto:{{ticket.assignee.email}}?subject=Ticket {{ticket.id}} - Thanks!">{{ticket.assignee.full_name}}{% endif %}</a> directly with your gratitude.<br>
-		  Please take a moment to tell us how we're doing! <a style="color:#4B4B4B;" href="https://goo.gl/u1iYom"><b>EMN IT Help Desk User Satisfaction Survey</b></a>. Your TICKET ID IS: {{ ticket.id }} <br></p>
+        <div style="padding:8px;width:100%"><p>Your ticket has been closed.  If you want to express your thanks to your technician, simply email {% if ticket.assignee.email == null %}the <a style="text-underline:none" href="mailto:YOU@YOURDOMAIN.com?subject=Ticket {{ticket.id}} - Thanks!"> IT department {% else %} <a style="text-underline:none" href="mailto:{{ticket.assignee.email}}?subject=Ticket {{ticket.id}} - Thanks!">{{ticket.assignee.full_name}}{% endif %}</a> directly with your note.<br>
+		  Please take a moment to tell us how we're doing! <a style="color:#4B4B4B;" href="https://goo.gl/j3ZZiJ"><b>EMN IT Help Desk User Satisfaction Survey</b></a>. Your TICKET ID IS: {{ ticket.id }} <br></p>
 <p>If you would like to <b>reopen</b> this ticket, simply reply to this email and remove <i>[CLOSED]</i> from the subject text.{% when 'open' %}To <b>update</b> this request simply reply to this email, make sure the Ticket ID (including brackets) appears in the subject line.{%endcase%} Alternatively, visit the <a style="text-underline:none" href="{{ticket.portal_url | escape}}">User Portal</a><br>
         </div>
       </td>
